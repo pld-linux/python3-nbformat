@@ -1,0 +1,11 @@
+--- nbformat-4.4.0/setup.py.orig	2017-06-06 18:55:25.000000000 +0200
++++ nbformat-4.4.0/setup.py	2019-10-01 05:33:40.480776705 +0200
+@@ -83,7 +83,7 @@
+     ],
+ )
+ 
+-if 'develop' in sys.argv or any(a.startswith('bdist') for a in sys.argv):
++if True:
+     import setuptools
+ 
+ setuptools_args = {}
