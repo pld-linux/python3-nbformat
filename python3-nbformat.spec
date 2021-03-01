@@ -7,7 +7,7 @@ Summary:	The Jupyter Notebook Format
 Summary(pl.UTF-8):	Format Jupyter Notebook
 Name:		python3-nbformat
 Version:	5.0.5
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/nbformat/
