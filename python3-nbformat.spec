@@ -60,7 +60,7 @@ Dokumentacja API modułu Pythona nbformat.
 
 %prep
 %setup -q -n nbformat-%{version}
-%patch0 -p1
+%patch -P 0 -p1
 
 %build
 %py3_build
