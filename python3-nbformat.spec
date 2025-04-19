@@ -7,13 +7,14 @@ Summary:	The Jupyter Notebook Format
 Summary(pl.UTF-8):	Format Jupyter Notebook
 Name:		python3-nbformat
 Version:	5.0.5
-Release:	6
+Release:	7
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/nbformat/
 Source0:	https://files.pythonhosted.org/packages/source/n/nbformat/nbformat-%{version}.tar.gz
 # Source0-md5:	b519838bfe4765cda1885936db4a2bea
 Patch0:		%{name}-use_setuptools.patch
+Patch1:		python-3.12.patch
 URL:		https://pypi.org/project/nbformat/
 BuildRequires:	python3-modules >= 1:3.5
 BuildRequires:	python3-setuptools
@@ -61,6 +62,7 @@ Dokumentacja API modułu Pythona nbformat.
 %prep
 %setup -q -n nbformat-%{version}
 %patch -P 0 -p1
+%patch -P 1 -p1
 
 %build
 %py3_build
