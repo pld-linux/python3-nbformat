@@ -70,11 +70,12 @@ Dokumentacja API modułu Pythona nbformat.
 
 %if %{with tests}
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
+PYTHONPATH=$(readlink -f build-3/*.whl) \
 %{__python3} -m pytest -p no:unraisableexception tests
 %endif
 
 %if %{with doc}
-PYTHONPATH=$(pwd) \
+PYTHONPATH=$(readlink -f build-3/*.whl) \
 %{__make} -C docs html \
 	SPHINXBUILD=sphinx-build-3
 %endif
