@@ -69,6 +69,7 @@ Dokumentacja API modułu Pythona nbformat.
 %py3_build_pyproject
 
 %if %{with tests}
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
 %{__python3} -m pytest -p no:unraisableexception tests
 %endif
 
