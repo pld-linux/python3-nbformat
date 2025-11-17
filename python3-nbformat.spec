@@ -20,24 +20,22 @@ BuildRequires:	python3-hatchling >= 1.5
 BuildRequires:	python3-installer
 BuildRequires:	python3-modules >= 1:3.8
 %if %{with tests}
-BuildRequires:	python3-fastjsonschema
-BuildRequires:	python3-ipython_genutils
-BuildRequires:	python3-jsonschema >= 2.5.1
-BuildRequires:	python3-jupyter_core
+BuildRequires:	python3-fastjsonschema >= 2.15
+BuildRequires:	python3-jsonschema >= 2.6
+BuildRequires:	python3-jupyter_core >= 4.12
 BuildRequires:	python3-pep440
 BuildRequires:	python3-pytest
 BuildRequires:	python3-pytest-cov
 BuildRequires:	python3-testpath
-BuildRequires:	python3-traitlets >= 4.1
+BuildRequires:	python3-traitlets >= 5.1
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 2.044
 %if %{with doc}
 BuildRequires:	sphinx-pdg-3
-BuildRequires:	python3-ipython_genutils
-BuildRequires:	python3-jsonschema >= 2.5.1
-BuildRequires:	python3-jupyter_core
-BuildRequires:	python3-traitlets
+BuildRequires:	python3-jsonschema >= 2.6
+BuildRequires:	python3-jupyter_core >= 4.12
+BuildRequires:	python3-traitlets >= 5.1
 %endif
 Requires:	python3-modules >= 1:3.8
 BuildArch:	noarch
@@ -93,9 +91,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc LICENSE README.md
-%attr(755,root,root) %{_bindir}/jupyter-trust
+%doc CHANGELOG.md LICENSE README.md
 %attr(755,root,root) %{_bindir}/jupyter-trust-3
+%{_bindir}/jupyter-trust
 %{py3_sitescriptdir}/nbformat
 %{py3_sitescriptdir}/nbformat-%{version}.dist-info
 
